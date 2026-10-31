@@ -7,7 +7,7 @@ using TMPro;
 public class CardView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("Kart Metinleri")]
-    [SerializeField] private TextMeshProUGUI sectorText; // Yeni: Üstteki kategori (Örn: SANAYİ BÖLGESİ)
+    [SerializeField] private TextMeshProUGUI sectorText; // Üst kategori (Örn: SANAYİ BÖLGESİ)
     [SerializeField] private TextMeshProUGUI titleText;  // Ana başlık
     [SerializeField] private TextMeshProUGUI descText;   // Açıklama
 
@@ -44,7 +44,7 @@ public class CardView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     }
 
     /// <summary>
-    /// AI'dan veya veritabanından gelen yeni kriz kartını doldurur.
+    /// Karta yeni bir kriz içeriği yüklemek için kullanılır.
     /// </summary>
     public void SetupCard(string sector, string title, string description)
     {
