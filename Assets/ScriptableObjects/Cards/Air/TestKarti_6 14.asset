@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 14
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: "Asfalt Buharla\u015Fmas\u0131"
+  title: "S\u0131cak Asfalt Buharlar\u0131"
+  description: "A\u015F\u0131r\u0131 s\u0131caklarda erimeye ba\u015Flayan yeni d\xF6k\xFClm\xFC\u015F asfaltlar havaya petrokimya buharlar\u0131 sal\u0131yor."
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "\xC7al\u0131\u015Fmalar\u0131 Durdur"
+    carbonImpact: -9
+    budgetImpact: -7
+    supportImpact: 7
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "So\u011Fuk Asfalt Form\xFCl\xFC"
+    carbonImpact: -4
+    budgetImpact: -8
+    supportImpact: 5
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Serme \u0130\u015Flemine Devam"
+    carbonImpact: 7
+    budgetImpact: 9
+    supportImpact: -5

@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: "Asfalt ve Is\u0131 Adas\u0131 Krizi"
+  title: "Betonla\u015Fma ve S\u0131cakl\u0131k"
+  description: "\u015Eehir merkezindeki a\u015F\u0131r\u0131 betonla\u015Fma ve yans\u0131t\u0131c\u0131 olmayan \xE7at\u0131lar, atmosfer s\u0131cakl\u0131\u011F\u0131n\u0131 tehlikeli d\xFCzeyde art\u0131rarak enerji \u015Febekesini kilitledi."
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Ye\u015Fil \xC7at\u0131 Zorunlulu\u011Fu"
+    carbonImpact: -10
+    budgetImpact: -9
+    supportImpact: 10
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: Termal Kaplama
+    carbonImpact: -5
+    budgetImpact: -7
+    supportImpact: 6
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Klimalara Y\xFCklen"
+    carbonImpact: 10
+    budgetImpact: 11
+    supportImpact: -6

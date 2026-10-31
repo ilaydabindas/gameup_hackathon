@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 7
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: "K\xF6m\xFCr Kullan\u0131m Patlamas\u0131"
+  title: "Kalitesiz K\xF6m\xFCr Sisi"
+  description: "Do\u011Falgaz fiyatlar\u0131n\u0131n artmas\u0131yla dar gelirli mahallelerde kalitesiz k\xF6m\xFCr kullan\u0131m\u0131ndan dolay\u0131 sis tabakas\u0131 olu\u015Ftu."
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Gaz S\xFCbvansiyonu"
+    carbonImpact: -9
+    budgetImpact: -14
+    supportImpact: 12
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Merkezi Is\u0131tma A\u011F\u0131"
+    carbonImpact: -5
+    budgetImpact: -11
+    supportImpact: 7
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Piyasaya Kar\u0131\u015Fma"
+    carbonImpact: 8
+    budgetImpact: 6
+    supportImpact: -5

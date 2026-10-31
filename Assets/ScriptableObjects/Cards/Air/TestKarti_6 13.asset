@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 13
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: "Festival Hava Kirlili\u011Fi"
+  title: "Kutlama Havai Fi\u015Fekleri"
+  description: "\u015Eehir festivalinde at\u0131lan binlerce havai fi\u015Fek, gece g\xF6ky\xFCz\xFCn\xFC zehirli partik\xFCllerle doldurdu."
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Kutlamay\u0131 Yasakla"
+    carbonImpact: -8
+    budgetImpact: -4
+    supportImpact: 6
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Lazer G\xF6sterisi"
+    carbonImpact: -3
+    budgetImpact: -5
+    supportImpact: 5
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Gelenektir Kar\u0131\u015Fma"
+    carbonImpact: 6
+    budgetImpact: 7
+    supportImpact: -4

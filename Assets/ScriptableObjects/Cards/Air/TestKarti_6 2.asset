@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 2
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: "Transatlantik Kargo U\xE7u\u015Flar\u0131"
+  title: "Kargo U\xE7a\u011F\u0131 Yo\u011Funlu\u011Fu"
+  description: "K\xFCresel e-ticaret devleri, hava kargolar\u0131n\u0131 art\u0131rarak g\xF6ky\xFCz\xFCndeki karbon yo\u011Funlu\u011Funu t\u0131rmand\u0131rd\u0131."
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: Ek Vergi Getir
+    carbonImpact: -10
+    budgetImpact: -6
+    supportImpact: 6
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Hibrit Motor Te\u015Fviki"
+    carbonImpact: -5
+    budgetImpact: -9
+    supportImpact: 5
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: Ticareti Destekle
+    carbonImpact: 11
+    budgetImpact: 14
+    supportImpact: -7

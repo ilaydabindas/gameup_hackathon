@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 1
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: Hava Krizi
+  title: "Aerosol P\xFCsk\xFCrtme Krizi"
+  description: "Tar\u0131m arazilerinde kullan\u0131lan kimyasal aerosoller stratosferdeki dengeyi tehdit ediyor."
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Kimyasal\u0131 Yasakla"
+    carbonImpact: -11
+    budgetImpact: -8
+    supportImpact: 7
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: Organik Sprey
+    carbonImpact: -5
+    budgetImpact: -6
+    supportImpact: 5
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Serbest B\u0131rak"
+    carbonImpact: 9
+    budgetImpact: 12
+    supportImpact: -6

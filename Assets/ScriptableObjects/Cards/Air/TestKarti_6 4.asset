@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 4
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: "Yang\u0131n"
+  title: "Orman Yang\u0131n\u0131 Duman\u0131"
+  description: "Yaz s\u0131caklar\u0131yla birlikte \xE7\u0131kan orman yang\u0131nlar\u0131ndan yay\u0131lan dumanlar kom\u015Fu metropollerin havas\u0131n\u0131 zehirliyor"
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: Acil Sefeberlik
+    carbonImpact: -12
+    budgetImpact: -15
+    supportImpact: 11
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Yapay Ya\u011Fmur Drone'u"
+    carbonImpact: -7
+    budgetImpact: -10
+    supportImpact: 7
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Do\u011Fald\u0131r Kar\u0131\u015Fma"
+    carbonImpact: 14
+    budgetImpact: 5
+    supportImpact: -9

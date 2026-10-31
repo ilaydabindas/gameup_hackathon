@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 10
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: "End\xFCstriyel Asit Ya\u011Fmuru"
+  title: "K\xFCk\xFCrt Sal\u0131n\u0131m Alarm\u0131"
+  description: "K\xFCk\xFCrt dioksit sal\u0131n\u0131m\u0131n\u0131n artmas\u0131, b\xF6lgede asit ya\u011Fmuru ya\u011Fma riskini kritik seviyeye \xE7\u0131kard\u0131."
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: Fabrikalara Kota
+    carbonImpact: -13
+    budgetImpact: -10
+    supportImpact: 9
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "N\xF6tralizasyon Kulesi"
+    carbonImpact: -6
+    budgetImpact: -7
+    supportImpact: 6
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Riski \xD6nemseme"
+    carbonImpact: 11
+    budgetImpact: 12
+    supportImpact: -6

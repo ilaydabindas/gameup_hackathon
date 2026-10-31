@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 12
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: "K\xF6m\xFCr Tozu"
+  title: "A\xE7\u0131k Maden Tozlar\u0131"
+  description: "A\xE7\u0131k i\u015Fletme k\xF6m\xFCr madeninden kalkan r\xFCzgarl\u0131 tozlar \xE7evredeki yerle\u015Fim yerlerinin solunum kalitesini d\xFC\u015F\xFCrd\xFC."
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Oca\u011F\u0131 M\xFCh\xFCrle"
+    carbonImpact: -12
+    budgetImpact: -13
+    supportImpact: 9
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Sulu P\xFCsk\xFCrtme"
+    carbonImpact: -5
+    budgetImpact: -6
+    supportImpact: 5
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "\xDCretime Devam"
+    carbonImpact: 10
+    budgetImpact: 11
+    supportImpact: -6

@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 6
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: 
-  title: 
-  description: 
+  sectorTag: "Eritme Bacalar\u0131"
+  title: "Plastik Geri D\xF6n\xFC\u015F\xFCm"
+  description: "Geri d\xF6n\xFC\u015F\xFCm tesislerinde kontrols\xFCz eritilen plastikler havaya a\u011F\u0131r toksik gazlar sal\u0131yor."
   ecoChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Faaliyeti Ask\u0131ya Al"
+    carbonImpact: -11
+    budgetImpact: -9
+    supportImpact: 8
   techChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: "Kapal\u0131 Devre Sistem"
+    carbonImpact: -5
+    budgetImpact: -7
+    supportImpact: 5
   indChoice:
-    choiceLabel: 
-    carbonImpact: 0
-    budgetImpact: 0
-    supportImpact: 0
+    choiceLabel: Tam Gaz Devam
+    carbonImpact: 10
+    budgetImpact: 12
+    supportImpact: -6
