@@ -25,14 +25,18 @@ public class HUDManager : MonoBehaviour
     }
 
     [Header("3 Ana Metrik Barı")]
-    public MetricBarUI carbonMetric;  // 1. Tehlike (Karbon / Erozyon / Kirlilik)
-    public MetricBarUI budgetMetric;  // 2. Bütçe ($M)
-    public MetricBarUI supportMetric; // 3. Destek (%)
+    public MetricBarUI carbonMetric;  
+    public MetricBarUI budgetMetric;  
+    public MetricBarUI supportMetric; 
+
+    [Header("Sol Üst Bağımsız Bilgi Paneli (Yıl, Mevsim, Tur)")]
+    public TextMeshProUGUI infoRowText;     
+    public TextMeshProUGUI realmSubRowText; 
 
     [Header("Animasyon ve Renk Ayarları")]
     [SerializeField] private float fillSmoothSpeed = 6f;
-    [SerializeField] private Color goodPreviewColor = new Color(0.20f, 0.83f, 0.60f); // #34d399 (Yeşil)
-    [SerializeField] private Color badPreviewColor = new Color(0.96f, 0.25f, 0.37f);  // #f43f5e (Kırmızı)
+    [SerializeField] private Color goodPreviewColor = new Color(0.20f, 0.83f, 0.60f); 
+    [SerializeField] private Color badPreviewColor = new Color(0.96f, 0.25f, 0.37f);  
 
     private void Awake()
     {
@@ -98,27 +102,20 @@ public class HUDManager : MonoBehaviour
         if (supportMetric.previewText != null) supportMetric.previewText.gameObject.SetActive(false);
     }
 
-    // =========================================================================
-    // DİĞER SCRIPTLERİN ARADIĞI UYUMLULUK METOTLARI (ALIAS)
-    // =========================================================================
-    
-    public void ClearPreview()
-    {
-        ClearAllPreviews();
-    }
+  public void UpdateTurnAndSeason(int year, string seasonName, string seasonIcon, int currentTurn, int maxTurns, string realmTitle, string difficulty)
+{
+    // Üst satır: Yıl ve Mevsim
+    if (infoRowText != null)
+        infoRowText.text = $"{year} | {seasonName}";
 
-    public void UpdateMetrics(int cDelta, int bDelta, int sDelta)
-    {
-        ApplyMetricChanges(cDelta, bDelta, sDelta);
-    }
+    // Alt satır: Tur sayısı
+    if (realmSubRowText != null)
+        realmSubRowText.text = $"Tur: {currentTurn} / {maxTurns}";
+}
 
-    // GameManager.cs'in aradığı UpdateBars metodu eklendi:
-    public void UpdateBars(int cVal, int bVal, int sVal)
-    {
-        SetMetricsTarget(cVal, bVal, sVal);
-    }
-
-    // =========================================================================
+    public void ClearPreview() { ClearAllPreviews(); }
+    public void UpdateMetrics(int cDelta, int bDelta, int sDelta) { ApplyMetricChanges(cDelta, bDelta, sDelta); }
+    public void UpdateBars(int cVal, int bVal, int sVal) { SetMetricsTarget(cVal, bVal, sVal); }
 
     private void SetMetricImmediate(MetricBarUI metric, float val)
     {
