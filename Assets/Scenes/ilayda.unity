@@ -1273,6 +1273,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: 2019090128306834583, guid: 451e3a16f24464288bb64d2941e0e653, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2019090128306834583, guid: 451e3a16f24464288bb64d2941e0e653, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2472240051844594628, guid: 451e3a16f24464288bb64d2941e0e653, type: 3}
       propertyPath: m_fontSize
       value: 16
