@@ -8,9 +8,14 @@ public class GameManager : MonoBehaviour
     public int budget = 65;
     public int support = 65;
 
-    [Header("Tur Ayarları")]
+    [Header("Tur ve Zaman Ayarları")]
     public int currentTurn = 1;
     public int maxTurns = 24;
+    public int currentYear = 2026;
+
+    // HTML prototipindeki mevsim dizilimi (Yılda 4 mevsim)
+    private string[] seasonNames = { "İLKBAHAR", "YAZ", "SONBAHAR", "KIŞ" };
+    private string[] seasonIcons = { "", "", "", "" };
 
     [Header("Referanslar")]
     public CardView cardView;
@@ -24,7 +29,12 @@ public class GameManager : MonoBehaviour
         cardView.OnSwipeRight += HandleEcoChoice;
         cardView.OnSwipeUp += HandleTechChoice;
         cardView.OnSwipeLeft += HandleIndChoice;
+        
         HUDManager.Instance.UpdateBars(carbon, budget, support);
+        
+        // Oyun ilk açıldığında sol üst tur/yıl bilgisini ilklendir
+        UpdateTurnDisplay();
+        
         LoadNextCard();
     }
 
@@ -73,9 +83,7 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"METRİKLER GÜNCELLENDİ -> Karbon: {carbon} | Bütçe: {budget} | Destek: {support}");
         
-        // TODO: Burada UI barlarını güncelleyen kodu çağırabilirsin
-        // HUDManager.Instance.UpdateBars(carbon, budget, support);
-    HUDManager.Instance.UpdateBars(carbon, budget, support);
+        HUDManager.Instance.UpdateBars(carbon, budget, support);
         AdvanceTurn();
     }
 
@@ -89,7 +97,13 @@ public class GameManager : MonoBehaviour
         }
 
         currentTurn++;
-        
+
+        // HTML prototipindeki mantık: Her 4 turda 1 yıl ilerler (Yılda 4 mevsim)
+        currentYear = 2026 + Mathf.FloorToInt((currentTurn - 1) / 4);
+
+        // Sol üst köşedeki tur ve mevsim göstergesini güncelle
+        UpdateTurnDisplay();
+
         if (currentTurn > maxTurns)
         {
             Debug.Log("OYUN BİTTİ - ZAFER!");
@@ -98,5 +112,25 @@ public class GameManager : MonoBehaviour
 
         // Yeni tura geçildi, kısa bir gecikme ile yeni kartı yükle
         Invoke(nameof(LoadNextCard), 0.5f);
+    }
+
+    private void UpdateTurnDisplay()
+    {
+        if (HUDManager.Instance != null)
+        {
+            int seasonIndex = (currentTurn - 1) % 4;
+            string activeSeasonName = seasonNames[seasonIndex];
+            string activeSeasonIcon = seasonIcons[seasonIndex];
+
+            HUDManager.Instance.UpdateTurnAndSeason(
+                currentYear, 
+                activeSeasonName, 
+                activeSeasonIcon, 
+                currentTurn, 
+                maxTurns, 
+                "1. OYUN: HAVA KOMUTASI", 
+                "DENGELİ"
+            );
+        }
     }
 }

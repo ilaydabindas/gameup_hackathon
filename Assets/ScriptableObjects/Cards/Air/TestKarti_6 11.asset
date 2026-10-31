@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
+  m_Name: TestKarti_6 11
+  m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
+  sectorTag: "Liman A\xE7\u0131\u011F\u0131 A\u011F\u0131r Yak\u0131t"
+  title: Liman Kargo Emisyonu
+  description: "Uluslararas\u0131 kargo gemileri liman a\xE7\u0131klar\u0131nda standart d\u0131\u015F\u0131 a\u011F\u0131r mazot yakarak havay\u0131 kirletiyor."
+  ecoChoice:
+    choiceLabel: "Limana Giri\u015F Yasa\u011F\u0131"
+    carbonImpact: -10
+    budgetImpact: -8
+    supportImpact: 8
+  techChoice:
+    choiceLabel: "K\u0131y\u0131 Elektrik Ba\u011Flant\u0131s\u0131"
+    carbonImpact: -5
+    budgetImpact: -9
+    supportImpact: 6
+  indChoice:
+    choiceLabel: Serbest Ticaret
+    carbonImpact: 9
+    budgetImpact: 13
+    supportImpact: -7

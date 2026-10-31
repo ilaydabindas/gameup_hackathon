@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
+  m_Name: TestKarti_6 13
+  m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
+  sectorTag: "Festival Hava Kirlili\u011Fi"
+  title: "Kutlama Havai Fi\u015Fekleri"
+  description: "\u015Eehir festivalinde at\u0131lan binlerce havai fi\u015Fek, gece g\xF6ky\xFCz\xFCn\xFC zehirli partik\xFCllerle doldurdu."
+  ecoChoice:
+    choiceLabel: "Kutlamay\u0131 Yasakla"
+    carbonImpact: -8
+    budgetImpact: -4
+    supportImpact: 6
+  techChoice:
+    choiceLabel: "Lazer G\xF6sterisi"
+    carbonImpact: -3
+    budgetImpact: -5
+    supportImpact: 5
+  indChoice:
+    choiceLabel: "Gelenektir Kar\u0131\u015Fma"
+    carbonImpact: 6
+    budgetImpact: 7
+    supportImpact: -4
