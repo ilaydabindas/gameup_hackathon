@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
+  m_Name: TestKarti_3
+  m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
+  sectorTag: "HAVACILIK A\u011EI"
+  title: "\xD6zel Jet Emisyonu!"
+  description: "Zenginlerin \xF6zel jetleri ve s\u0131k i\xE7 hat u\xE7u\u015Flar\u0131 atmosferi h\u0131zla kirletiyor. \u015Eirketler u\xE7u\u015F haklar\u0131n\u0131n k\u0131s\u0131tlanmas\u0131n\u0131 istemiyor."
+  ecoChoice:
+    choiceLabel: "H\u0131zl\u0131 Tren A\u011F\u0131"
+    carbonImpact: -12
+    budgetImpact: -15
+    supportImpact: 12
+  techChoice:
+    choiceLabel: "Biyo-Yak\u0131t \u015Eart\u0131"
+    carbonImpact: -6
+    budgetImpact: -6
+    supportImpact: 5
+  indChoice:
+    choiceLabel: Vergi Muafiyeti
+    carbonImpact: 9
+    budgetImpact: 20
+    supportImpact: -6
