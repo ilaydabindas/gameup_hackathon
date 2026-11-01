@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a671881253eeec948a75e7d35c379701, type: 3}
+  m_Name: Air_KomurSantrali
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  realm: 0
+  sector: "RAF\u0130NER\u0130 HATTI"
+  title: "ALARM: Metan S\u0131z\u0131nt\u0131s\u0131!"
+  description: "Y\xFCksek bas\u0131n\xE7l\u0131 boru hatt\u0131 \xE7atlad\u0131! Atmosfere sera gaz\u0131 s\u0131z\u0131yor!"
+  emoji: "\U0001F6E2\uFE0F"
+  cardIcon: {fileID: 0}
+  isTimed: 0
+  leftChoice:
+    label: "Gaz\u0131 Yak"
+    type: 2
+    carbonDelta: 11
+    budgetDelta: 12
+    supportDelta: -8
+  upChoice:
+    label: "Robot Onar\u0131m\u0131"
+    type: 1
+    carbonDelta: -5
+    budgetDelta: -6
+    supportDelta: 5
+  rightChoice:
+    label: "Tesisi M\xFCh\xFCrle"
+    type: 0
+    carbonDelta: -10
+    budgetDelta: -10
+    supportDelta: 8

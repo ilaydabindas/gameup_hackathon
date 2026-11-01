@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a671881253eeec948a75e7d35c379701, type: 3}
+  m_Name: Air_KisaMesafeJet
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  realm: 0
+  sector: "HAVACILIK A\u011EI"
+  title: "K\u0131sa Mesafe Jet Emisyonu!"
+  description: "\xD6zel jetler ve i\xE7 hat u\xE7u\u015Flar\u0131 atmosferin \xFCst katmanlar\u0131n\u0131 h\u0131zla kirletiyor."
+  emoji: "\u2708\uFE0F"
+  cardIcon: {fileID: 0}
+  isTimed: 0
+  leftChoice:
+    label: Vergi Muafiyeti
+    type: 2
+    carbonDelta: 9
+    budgetDelta: 15
+    supportDelta: -6
+  upChoice:
+    label: "Biyo-Yak\u0131t \u015Eart\u0131"
+    type: 1
+    carbonDelta: -6
+    budgetDelta: -5
+    supportDelta: 5
+  rightChoice:
+    label: "H\u0131zl\u0131 Tren A\u011F\u0131"
+    type: 0
+    carbonDelta: -11
+    budgetDelta: -11
+    supportDelta: 9

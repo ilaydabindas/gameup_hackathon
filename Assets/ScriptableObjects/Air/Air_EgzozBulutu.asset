@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a671881253eeec948a75e7d35c379701, type: 3}
+  m_Name: Air_EgzozBulutu
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  realm: 0
+  sector: "METROPOL ULA\u015EIMI"
+  title: "Egzoz Bulutu Alarm\u0131!"
+  description: "Dizel ara\xE7lar \u015Fehir merkezinde nefes almay\u0131 zorla\u015Ft\u0131rd\u0131."
+  emoji: "\U0001F697"
+  cardIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  isTimed: 0
+  leftChoice:
+    label: Ucuz Mazot
+    type: 2
+    carbonDelta: 10
+    budgetDelta: 14
+    supportDelta: -4
+  upChoice:
+    label: "\u015Earj Te\u015Fviki"
+    type: 1
+    carbonDelta: -6
+    budgetDelta: -5
+    supportDelta: 6
+  rightChoice:
+    label: "\xDCcretsiz Rayl\u0131"
+    type: 0
+    carbonDelta: -10
+    budgetDelta: -10
+    supportDelta: 10

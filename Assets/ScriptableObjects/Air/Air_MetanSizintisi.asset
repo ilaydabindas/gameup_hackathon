@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a671881253eeec948a75e7d35c379701, type: 3}
+  m_Name: Air_MetanSizintisi
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  realm: 0
+  sector: "VER\u0130 MERKEZ\u0130"
+  title: AI Sunucu Enerji Krizi!
+  description: "Bulut veri merkezleri metropol\xFCn elektri\u011Finin b\xFCy\xFCk k\u0131sm\u0131n\u0131 t\xFCketiyor."
+  emoji: "\U0001F5A5\uFE0F"
+  cardIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  isTimed: 0
+  leftChoice:
+    label: "Te\u015Fvik Ver"
+    type: 2
+    carbonDelta: 9
+    budgetDelta: 16
+    supportDelta: -5
+  upChoice:
+    label: "S\u0131v\u0131 So\u011Futma"
+    type: 1
+    carbonDelta: -5
+    budgetDelta: -4
+    supportDelta: 5
+  rightChoice:
+    label: "G\xFCne\u015F \u015Eart\u0131"
+    type: 0
+    carbonDelta: -9
+    budgetDelta: -9
+    supportDelta: 7
