@@ -4,11 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/0MainMenu.unity
-    guid: d5633d2db9f1a4349852335223c48eb8
-  - enabled: 1
-    path: Assets/Scenes/ilayda.unity
-    guid: 1f0505b321d5e4720ab4e0ec901201c1
+  m_Scenes: []
   m_configObjects: {}

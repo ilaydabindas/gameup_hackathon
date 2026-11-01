@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6681c49e15c8e40409761271c9680951, type: 3}
   m_Name: Tech_Air_Mirror
   m_EditorClassIdentifier: Assembly-CSharp::TechData
-  techId: drone
+  techId: mirror
   realm: 0
-  techName: "Avc\u0131 Dron"
-  emoji: "\U0001F6F8"
-  cost: 18
+  techName: "Uzay Aynas\u0131"
+  emoji: "\U0001F6F0\uFE0F"
+  cost: 28
   maxTurns: 5
-  description: "Oto CO\u2082 Av\u0131 (5T)"
+  description: "An\u0131nda -12% CO\u2082"
   techIcon: {fileID: 0}

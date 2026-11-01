@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6681c49e15c8e40409761271c9680951, type: 3}
   m_Name: Tech_Air_Forest
   m_EditorClassIdentifier: Assembly-CSharp::TechData
-  techId: shield
+  techId: forest
   realm: 0
-  techName: "K\u0131y\u0131 Kalkan\u0131"
-  emoji: "\U0001F6E1\uFE0F"
-  cost: 20
+  techName: Biyo-Kule
+  emoji: "\U0001F33F"
+  cost: 16
   maxTurns: 5
-  description: "Kriz Hasar\u0131 %50 (5T)"
+  description: +4% Destek/T (5T)
   techIcon: {fileID: 0}
