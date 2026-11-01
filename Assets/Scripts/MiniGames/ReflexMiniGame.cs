@@ -168,11 +168,23 @@ public class ReflexMinigame : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+
+        // Minigame kapandı, kart akışını devam ettir
+        if (MiniGameManager.Instance != null)
+        {
+            MiniGameManager.Instance.CloseMiniGame();
+        }
     }
 
     public void CloseWithoutReward()
     {
         _isActive = false;
         gameObject.SetActive(false);
+
+        // Ödülsüz kapatılsa da kart akışını devam ettir
+        if (MiniGameManager.Instance != null)
+        {
+            MiniGameManager.Instance.CloseMiniGame();
+        }
     }
 }

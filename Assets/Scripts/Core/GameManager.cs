@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
     [Header("Oyun Metrikleri")]
     public int carbon = 48;
     public int budget = 65;
@@ -24,6 +26,18 @@ public class GameManager : MonoBehaviour
 
     private CrisisCardData currentCardData;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         // Eğer editörden atanmadıysa aynı obje üzerinden çekmeyi dene
@@ -33,11 +47,17 @@ public class GameManager : MonoBehaviour
         }
 
         // CardView'in fırlattığı eventleri dinliyoruz
-        cardView.OnSwipeRight += HandleEcoChoice;
-        cardView.OnSwipeUp += HandleTechChoice;
-        cardView.OnSwipeLeft += HandleIndChoice;
+        if (cardView != null)
+        {
+            cardView.OnSwipeRight += HandleEcoChoice;
+            cardView.OnSwipeUp += HandleTechChoice;
+            cardView.OnSwipeLeft += HandleIndChoice;
+        }
         
-        HUDManager.Instance.UpdateBars(carbon, budget, support);
+        if (HUDManager.Instance != null)
+        {
+            HUDManager.Instance.UpdateBars(carbon, budget, support);
+        }
         
         // Oyun ilk açıldığında sol üst tur/yıl bilgisini ilklendir
         UpdateTurnDisplay();
@@ -56,9 +76,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void LoadNextCard()
+    public void LoadNextCard()
     {
-        if (availableCards.Count == 0)
+        if (availableCards == null || availableCards.Count == 0)
         {
             Debug.LogWarning("Deste bitti! Tüm kartlar oynandı.");
             return;
@@ -70,7 +90,11 @@ public class GameManager : MonoBehaviour
         availableCards.RemoveAt(randomIndex); // Çekilen kartı listeden çıkar (tekrar gelmesin)
 
         // UI'a kartı kur
-        cardView.SetupCard(currentCardData);
+        if (cardView != null)
+        {
+            cardView.gameObject.SetActive(true);
+            cardView.SetupCard(currentCardData);
+        }
     }
 
     private void HandleEcoChoice() { ApplyImpact(currentCardData.ecoChoice); }
@@ -90,7 +114,11 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"METRİKLER GÜNCELLENDİ -> Karbon: {carbon} | Bütçe: {budget} | Destek: {support}");
         
-        HUDManager.Instance.UpdateBars(carbon, budget, support);
+        if (HUDManager.Instance != null)
+        {
+            HUDManager.Instance.UpdateBars(carbon, budget, support);
+        }
+
         AdvanceTurn();
     }
 
@@ -154,8 +182,24 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // Yeni tura geçildi, kısa bir gecikme ile yeni kartı yükle
+        // 3. Minigame Kontrolü: Eğer minigame tetiklendiyse kart yüklemeyi beklet
+        if (MiniGameManager.Instance != null && MiniGameManager.Instance.CheckAndTriggerMiniGame())
+        {
+            if (cardView != null)
+            {
+                cardView.gameObject.SetActive(false); // Minigame açıldığı için kartı gizle
+            }
+            return;
+        }
+
+        // Minigame gelmediyse normal akışa devam et, kısa bir gecikme ile yeni kartı yükle
         Invoke(nameof(LoadNextCard), 0.5f);
+    }
+
+    // Minigame tamamlandığında MiniGameManager tarafından çağrılacak fonksiyon
+    public void ResumeAfterMiniGame()
+    {
+        Invoke(nameof(LoadNextCard), 0.3f);
     }
 
     private void UpdateTurnDisplay()
