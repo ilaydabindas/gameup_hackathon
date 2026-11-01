@@ -91,9 +91,9 @@ public class CardView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private string FormatImpact(CardChoice choice)
 {
     // Üstteki HUD barlarının renklerine uyumlu hex kodları
-    string carbonColor = "#F59E0B";  // Karbon için turuncu/sarı
-    string budgetColor = "#3B82F6";  // Bütçe için mavi
-    string supportColor = "#10B981"; // Destek için yeşil
+    string carbonColor = "#966107";  // Karbon için turuncu/sarı
+    string budgetColor = "#0a3e92";  // Bütçe için mavi
+    string supportColor = "#035925"; // Destek için yeşil
 
     // Artı işareti ve değerleri renklendirme etiketleriyle birlikte oluştur
     string c = choice.carbonImpact > 0 ? $"+{choice.carbonImpact}" : choice.carbonImpact.ToString();
