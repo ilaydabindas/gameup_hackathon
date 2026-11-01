@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
+  m_Name: TestKarti_6 8
+  m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
+  sectorTag: "\xC7evre Yolu Kilidi"
+  title: "Trafik S\u0131k\u0131\u015F\u0131kl\u0131\u011F\u0131"
+  description: "Sabah saatlerindeki trafik s\u0131k\u0131\u015F\u0131kl\u0131\u011F\u0131nda binlerce ara\xE7 r\xF6lantide bekleyerek rekor d\xFCzeyde karbon sald\u0131."
+  ecoChoice:
+    choiceLabel: "Plaka K\u0131s\u0131tlamas\u0131"
+    carbonImpact: -10
+    budgetImpact: -5
+    supportImpact: 7
+  techChoice:
+    choiceLabel: "Ak\u0131ll\u0131 Sinyalizasyon"
+    carbonImpact: -4
+    budgetImpact: -8
+    supportImpact: 6
+  indChoice:
+    choiceLabel: "Serbest Ak\u0131\u015F"
+    carbonImpact: 7
+    budgetImpact: 9
+    supportImpact: -5

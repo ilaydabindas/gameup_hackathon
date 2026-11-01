@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
+  m_Name: TestKarti_6 5
+  m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
+  sectorTag: "\u015Eehir \xC7\xF6p\xFC Yakma Tesisi"
+  title: "At\u0131k Yakma Bacas\u0131"
+  description: "Kat\u0131 at\u0131klar\u0131n yak\u0131ld\u0131\u011F\u0131 tesisin filtresiz bacas\u0131, gece yar\u0131s\u0131 y\xFCksek miktarda dioksin salg\u0131lad\u0131."
+  ecoChoice:
+    choiceLabel: Tesisi Kapat
+    carbonImpact: -14
+    budgetImpact: -10
+    supportImpact: 10
+  techChoice:
+    choiceLabel: Baca Yenileme
+    carbonImpact: -6
+    budgetImpact: -8
+    supportImpact: 6
+  indChoice:
+    choiceLabel: Yakmaya Devam
+    carbonImpact: 12
+    budgetImpact: 11
+    supportImpact: -7

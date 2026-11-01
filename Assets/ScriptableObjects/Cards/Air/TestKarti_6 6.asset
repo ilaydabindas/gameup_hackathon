@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
+  m_Name: TestKarti_6 6
+  m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
+  sectorTag: "Eritme Bacalar\u0131"
+  title: "Plastik Geri D\xF6n\xFC\u015F\xFCm"
+  description: "Geri d\xF6n\xFC\u015F\xFCm tesislerinde kontrols\xFCz eritilen plastikler havaya a\u011F\u0131r toksik gazlar sal\u0131yor."
+  ecoChoice:
+    choiceLabel: "Faaliyeti Ask\u0131ya Al"
+    carbonImpact: -11
+    budgetImpact: -9
+    supportImpact: 8
+  techChoice:
+    choiceLabel: "Kapal\u0131 Devre Sistem"
+    carbonImpact: -5
+    budgetImpact: -7
+    supportImpact: 5
+  indChoice:
+    choiceLabel: Tam Gaz Devam
+    carbonImpact: 10
+    budgetImpact: 12
+    supportImpact: -6
