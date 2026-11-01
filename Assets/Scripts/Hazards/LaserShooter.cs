@@ -7,6 +7,7 @@ public class LaserShooter : MonoBehaviour
     public static LaserShooter Instance { get; private set; }
 
     [Header("Baglantilar")]
+<<<<<<< Updated upstream
     [SerializeField] private RectTransform turretFirePoint; // Isinin cikacagi kule noktasi
     [SerializeField] private RectTransform laserBeamUI;      // Cizgi gorevi gorecek UI Image
     [SerializeField] private AudioSource audioSource;
@@ -15,6 +16,16 @@ public class LaserShooter : MonoBehaviour
     [Header("Lazer Parametreleri")]
     [SerializeField] private float beamThickness = 6f;       // Isin kalinligi (px)
     [SerializeField] private float laserDuration = 0.12f;    // Isinin gorunme suresi
+=======
+    [SerializeField] private RectTransform turretFirePoint; // Isinin baslayacagi namlu noktasi
+    [SerializeField] private RectTransform laserBeamUI;      // Cizgi gorevi gorecek UI Image
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip laserHitSound;        // Vurma sesi (opsiyonel)
+
+    [Header("Lazer Parametreleri")]
+    [SerializeField] private float beamThickness = 6f;       // Isin kalinligi (px)
+    [SerializeField] private float laserDuration = 0.12f;    // Isinin ekranda kalma suresi
+>>>>>>> Stashed changes
     [SerializeField] private Color laserColor = new Color32(56, 189, 248, 255); // Neon Turkuaz
 
     private Image _beamImage;
@@ -45,6 +56,7 @@ public class LaserShooter : MonoBehaviour
         Vector3 startWorldPos = turretFirePoint.position;
         Vector3 endWorldPos = targetRT.position;
 
+<<<<<<< Updated upstream
         // Lazeri ac ve hedefle turret arasina hizala
         PositionLaserBeam(startWorldPos, endWorldPos);
 
@@ -55,6 +67,12 @@ public class LaserShooter : MonoBehaviour
         PlayLaserSound();
 
         // Lazeri anlik parlatip kapat
+=======
+        PositionLaserBeam(startWorldPos, endWorldPos);
+        target.OnHit();
+        PlayLaserSound();
+
+>>>>>>> Stashed changes
         if (_laserRoutine != null) StopCoroutine(_laserRoutine);
         _laserRoutine = StartCoroutine(LaserFlashRoutine());
     }
@@ -63,14 +81,21 @@ public class LaserShooter : MonoBehaviour
     {
         laserBeamUI.gameObject.SetActive(true);
 
+<<<<<<< Updated upstream
         // Canvas ortaminda iki nokta arasi yon ve mesafe hesabi
+=======
+>>>>>>> Stashed changes
         Vector3 dir = worldEnd - worldStart;
         float distance = dir.magnitude;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         laserBeamUI.position = worldStart;
         laserBeamUI.rotation = Quaternion.Euler(0, 0, angle);
+<<<<<<< Updated upstream
         laserBeamUI.pivot = new Vector2(0f, 0.5f); // Sol orta noktadan uzasin
+=======
+        laserBeamUI.pivot = new Vector2(0f, 0.5f); // Soldan saga uzasin
+>>>>>>> Stashed changes
         laserBeamUI.sizeDelta = new Vector2(distance, beamThickness);
 
         if (_beamImage != null)
@@ -108,13 +133,19 @@ public class LaserShooter : MonoBehaviour
         }
         else
         {
+<<<<<<< Updated upstream
             // Eger AudioClip atanmadiysa anlik sentetik lazer sesi olusturur
+=======
+>>>>>>> Stashed changes
             AudioClip synthLaser = CreateProceduralLaserClip();
             audioSource.PlayOneShot(synthLaser);
         }
     }
 
+<<<<<<< Updated upstream
     // Harici dosya yuklemeden calisabilen dinamik frekans kaymali lazer "pew" sesi
+=======
+>>>>>>> Stashed changes
     private AudioClip CreateProceduralLaserClip()
     {
         int sampleRate = 44100;
@@ -125,7 +156,11 @@ public class LaserShooter : MonoBehaviour
         for (int i = 0; i < sampleCount; i++)
         {
             float t = (float)i / sampleRate;
+<<<<<<< Updated upstream
             float freq = Mathf.Lerp(900f, 150f, t / duration); // Yuksekten alcaga inen lazer sinyali
+=======
+            float freq = Mathf.Lerp(900f, 150f, t / duration);
+>>>>>>> Stashed changes
             samples[i] = Mathf.Sin(2f * Mathf.PI * freq * t) * (1f - (t / duration));
         }
 
