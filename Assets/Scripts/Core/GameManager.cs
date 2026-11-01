@@ -19,12 +19,19 @@ public class GameManager : MonoBehaviour
 
     [Header("Referanslar")]
     public CardView cardView;
+    public GameOverManager gameOverManager; // Bitiş ekranı scripti
     public List<CrisisCardData> availableCards; // Editörden kartları buraya sürükle
 
     private CrisisCardData currentCardData;
 
     private void Start()
     {
+        // Eğer editörden atanmadıysa aynı obje üzerinden çekmeyi dene
+        if (gameOverManager == null)
+        {
+            gameOverManager = GetComponent<GameOverManager>();
+        }
+
         // CardView'in fırlattığı eventleri dinliyoruz
         cardView.OnSwipeRight += HandleEcoChoice;
         cardView.OnSwipeUp += HandleTechChoice;
@@ -89,10 +96,40 @@ public class GameManager : MonoBehaviour
 
     private void AdvanceTurn()
     {
-        // HTML prototipindeki oyun sonu şartları
-        if (carbon >= 100 || budget <= 0 || support <= 0)
+        // 1. Kaybetme Şartları Kontrolü
+        if (carbon >= 100)
         {
-            Debug.Log("OYUN BİTTİ - KAYBETTİNİZ!");
+            if (gameOverManager != null)
+            {
+                gameOverManager.ShowGameOver(
+                    "KİRLİLİK MAKSİMUM!", 
+                    "Atmosferik karbon %100 eşiğini aştı. Şehir yaşanmaz hale geldi ve ekosistem çöktü."
+                );
+            }
+            return;
+        }
+
+        if (budget <= 0)
+        {
+            if (gameOverManager != null)
+            {
+                gameOverManager.ShowGameOver(
+                    "EKONOMİK İFLAS!", 
+                    "Bütçe tamamen tükendi. Yeşil enerji projeleri ve operasyonlar durduruldu."
+                );
+            }
+            return;
+        }
+
+        if (support <= 0)
+        {
+            if (gameOverManager != null)
+            {
+                gameOverManager.ShowGameOver(
+                    "TOPLUMSAL DESTEK BİTTİ!", 
+                    "Halkın güveni kalmadı. Şehir çapında başlayan grevler ve protestolar yönetimi devirdi."
+                );
+            }
             return;
         }
 
@@ -104,9 +141,16 @@ public class GameManager : MonoBehaviour
         // Sol üst köşedeki tur ve mevsim göstergesini güncelle
         UpdateTurnDisplay();
 
+        // 2. Zafer Şartı Kontrolü (Maksimum tura ulaşıldığında)
         if (currentTurn > maxTurns)
         {
-            Debug.Log("OYUN BİTTİ - ZAFER!");
+            if (gameOverManager != null)
+            {
+                gameOverManager.ShowGameOver(
+                    "YEŞİL ZAFER!", 
+                    $"2026-2031 döngüsünü başarıyla tamamladın! Karbon seviyesini kontrol altında tutarak iklim krizini durdurdun."
+                );
+            }
             return;
         }
 

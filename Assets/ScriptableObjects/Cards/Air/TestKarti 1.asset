@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
+  m_Name: TestKarti 1
+  m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
+  sectorTag: "Havadan M\xFCdahale K\u0131s\u0131t\u0131"
+  title: "Yang\u0131n U\xE7a\u011F\u0131 Yetersizli\u011Fi"
+  description: "Ba\u015Flayan k\xFC\xE7\xFCk \xE7apl\u0131 yang\u0131nlar, eski filolar nedeniyle havadan zaman\u0131nda m\xFCdahale edilemedi\u011Fi i\xE7in b\xFCy\xFCyor."
+  ecoChoice:
+    choiceLabel: "Yeni Filo Sat\u0131n Al"
+    carbonImpact: -10
+    budgetImpact: -15
+    supportImpact: 11
+  techChoice:
+    choiceLabel: "\u0130HA S\xF6nd\xFCrme A\u011F\u0131"
+    carbonImpact: -5
+    budgetImpact: -9
+    supportImpact: 7
+  indChoice:
+    choiceLabel: Karadan Yetin
+    carbonImpact: 8
+    budgetImpact: 4
+    supportImpact: -5
