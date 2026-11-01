@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 5
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "\u015Eehir \xC7\xF6p\xFC Yakma Tesisi"
+  sectorTag: "\xC7\xF6p Yakma Tesisi"
   title: "At\u0131k Yakma Bacas\u0131"
   description: "Kat\u0131 at\u0131klar\u0131n yak\u0131ld\u0131\u011F\u0131 tesisin filtresiz bacas\u0131, gece yar\u0131s\u0131 y\xFCksek miktarda dioksin salg\u0131lad\u0131."
   ecoChoice:

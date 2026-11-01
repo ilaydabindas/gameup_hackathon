@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 11
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "Liman A\xE7\u0131\u011F\u0131 A\u011F\u0131r Yak\u0131t"
+  sectorTag: "A\u011F\u0131r Yak\u0131t"
   title: Liman Kargo Emisyonu
   description: "Uluslararas\u0131 kargo gemileri liman a\xE7\u0131klar\u0131nda standart d\u0131\u015F\u0131 a\u011F\u0131r mazot yakarak havay\u0131 kirletiyor."
   ecoChoice:

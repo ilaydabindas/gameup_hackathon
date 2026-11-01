@@ -191,6 +191,12 @@ public class TrashSortingMinigame : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+
+        // Minigame tamamlandı, kart akışını devam ettir
+        if (MiniGameManager.Instance != null)
+        {
+            MiniGameManager.Instance.CloseMiniGame();
+        }
     }
 
     public void CloseWithoutReward()
@@ -201,5 +207,11 @@ public class TrashSortingMinigame : MonoBehaviour
         if (_feedbackCoroutine != null) StopCoroutine(_feedbackCoroutine);
 
         gameObject.SetActive(false);
+
+        // Ödülsüz kapatılsa da kart akışını devam ettir
+        if (MiniGameManager.Instance != null)
+        {
+            MiniGameManager.Instance.CloseMiniGame();
+        }
     }
 }

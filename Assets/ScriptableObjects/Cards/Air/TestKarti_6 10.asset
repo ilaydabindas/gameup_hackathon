@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 10
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "End\xFCstriyel Asit Ya\u011Fmuru"
+  sectorTag: "Asit Ya\u011Fmuru"
   title: "K\xFCk\xFCrt Sal\u0131n\u0131m Alarm\u0131"
   description: "K\xFCk\xFCrt dioksit sal\u0131n\u0131m\u0131n\u0131n artmas\u0131, b\xF6lgede asit ya\u011Fmuru ya\u011Fma riskini kritik seviyeye \xE7\u0131kard\u0131."
   ecoChoice:
