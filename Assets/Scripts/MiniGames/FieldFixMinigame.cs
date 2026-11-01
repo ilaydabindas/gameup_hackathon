@@ -273,6 +273,12 @@ public class FieldFixMinigame : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+
+        // Minigame kapandı, akışı devam ettir
+        if (MiniGameManager.Instance != null)
+        {
+            MiniGameManager.Instance.CloseMiniGame();
+        }
     }
 
     public void CloseWithoutReward()
@@ -286,5 +292,11 @@ public class FieldFixMinigame : MonoBehaviour
             StopCoroutine(_feedbackCoroutine);
 
         gameObject.SetActive(false);
+
+        // Minigame ödülsüz kapatılsa da akışı devam ettir
+        if (MiniGameManager.Instance != null)
+        {
+            MiniGameManager.Instance.CloseMiniGame();
+        }
     }
 }
