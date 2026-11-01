@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
+  m_Name: TestKarti 4
+  m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
+  sectorTag: "Kentsel D\xF6n\xFC\u015F\xFCm Tozlar\u0131"
+  title: "\u015Eantiye Moloz Tozlar\u0131"
+  description: "\u015Eehir genelindeki y\xFCzlerce \u015Fantiyeden y\xFCkselen moloz tozlar\u0131 havay\u0131 ve g\xF6r\xFC\u015F mesafesini kapatt\u0131."
+  ecoChoice:
+    choiceLabel: "\u015Eantiyeleri Durdur"
+    carbonImpact: -10
+    budgetImpact: -11
+    supportImpact: 8
+  techChoice:
+    choiceLabel: "Zorunlu File \u015Eart\u0131"
+    carbonImpact: -4
+    budgetImpact: -5
+    supportImpact: 5
+  indChoice:
+    choiceLabel: "\u0130n\u015Faat S\xFCrs\xFCn"
+    carbonImpact: 8
+    budgetImpact: 12
+    supportImpact: -5

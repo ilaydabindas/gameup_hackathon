@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
+  m_Name: TestKarti 5
+  m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
+  sectorTag: "Is\u0131 Bask\u0131s\u0131"
+  title: "Veri Merkezi Is\u0131s\u0131"
+  description: "Dev veri merkezlerinin d\u0131\u015Far\u0131 \xFCfledi\u011Fi devasa s\u0131cak hava dalgas\u0131 \xE7evredeki mikroklimay\u0131 bozdu."
+  ecoChoice:
+    choiceLabel: "\u015Eantiyeleri Durdur"
+    carbonImpact: -9
+    budgetImpact: -8
+    supportImpact: 7
+  techChoice:
+    choiceLabel: "S\u0131v\u0131 So\u011Futma Kulesi"
+    carbonImpact: -4
+    budgetImpact: -10
+    supportImpact: 6
+  indChoice:
+    choiceLabel: "So\u011Futmaya Devam"
+    carbonImpact: 8
+    budgetImpact: 9
+    supportImpact: -5
