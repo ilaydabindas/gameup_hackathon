@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -71,7 +72,14 @@ public class SettingsManager : MonoBehaviour
     // --- 4. BÖLÜMÜ YENİDEN BAŞLATMA ---
     public void RestartCurrentLevel()
     {
+        StartCoroutine(RestartRoutine());
+    }
+
+    private IEnumerator RestartRoutine()
+    {
         Time.timeScale = 1f;
+        // Buton animasyonunun ve olay döngüsünün bitmesi için karenin sonunu bekle
+        yield return new WaitForEndOfFrame();
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex);
     }
