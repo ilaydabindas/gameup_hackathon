@@ -17,25 +17,15 @@ public class TechManager : MonoBehaviour
     public bool BuyTechnology(TechData tech)
     {
         if (IsTechActive(tech.techId)) return false;
-        if (GameManager.Instance != null && GameManager.Instance.budget < tech.cost) return false;
-
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.budget -= tech.cost;
-        }
 
         activeTimers[tech.techId] = tech.maxTurns;
-
-        if (tech.techId == "mirror" && GameManager.Instance != null)
-        {
-            GameManager.Instance.carbon = Mathf.Max(0, GameManager.Instance.carbon - 12);
-        }
 
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.PlayPowerUp();
         }
 
+        Debug.Log($"[Ar-Ge] {tech.techName} aktifleştirildi!");
         return true;
     }
 
@@ -57,25 +47,7 @@ public class TechManager : MonoBehaviour
             if (activeTimers[key] > 0)
             {
                 activeTimers[key]--;
-                ApplyPassivePerTurnEffect(key);
             }
-        }
-    }
-
-    private void ApplyPassivePerTurnEffect(string techId)
-    {
-        if (GameManager.Instance == null) return;
-
-        switch (techId)
-        {
-            case "fusion":
-                GameManager.Instance.carbon = Mathf.Max(0, GameManager.Instance.carbon - 4);
-                GameManager.Instance.budget = Mathf.Min(100, GameManager.Instance.budget + 5);
-                break;
-            case "forest":
-                GameManager.Instance.carbon = Mathf.Max(0, GameManager.Instance.carbon - 2);
-                GameManager.Instance.support = Mathf.Min(100, GameManager.Instance.support + 4);
-                break;
         }
     }
 
