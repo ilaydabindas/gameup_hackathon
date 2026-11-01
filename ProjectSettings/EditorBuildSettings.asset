@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ilayda.unity
     guid: 1f0505b321d5e4720ab4e0ec901201c1
+  - enabled: 1
+    path: Assets/Scenes/nasil.unity
+    guid: 1fc5d3c395b607345bdf85abb3cc75e4
   m_configObjects: {}
