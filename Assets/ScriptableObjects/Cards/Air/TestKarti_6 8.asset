@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 8
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "\xC7evre Yolu Kilidi"
+  sectorTag: "\xC7evre Yolu"
   title: "Trafik S\u0131k\u0131\u015F\u0131kl\u0131\u011F\u0131"
   description: "Sabah saatlerindeki trafik s\u0131k\u0131\u015F\u0131kl\u0131\u011F\u0131nda binlerce ara\xE7 r\xF6lantide bekleyerek rekor d\xFCzeyde karbon sald\u0131."
   ecoChoice:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 7
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "K\xF6m\xFCr Kullan\u0131m Patlamas\u0131"
+  sectorTag: "K\xF6m\xFCr Kullan\u0131m\u0131"
   title: "Kalitesiz K\xF6m\xFCr Sisi"
   description: "Do\u011Falgaz fiyatlar\u0131n\u0131n artmas\u0131yla dar gelirli mahallelerde kalitesiz k\xF6m\xFCr kullan\u0131m\u0131ndan dolay\u0131 sis tabakas\u0131 olu\u015Ftu."
   ecoChoice:

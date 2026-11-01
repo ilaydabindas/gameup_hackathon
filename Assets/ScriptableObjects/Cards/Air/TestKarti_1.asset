@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_1
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "METROPOL ULA\u015EIMI"
+  sectorTag: "Metropol Ula\u015F\u0131m\u0131"
   title: "Yo\u011Fun Egzoz Bulutu!"
   description: "\u015Eehir merkezinde dizel ara\xE7 trafi\u011Fi y\xFCz\xFCnden nefes almak imkans\u0131z hale geldi. G\xF6ky\xFCz\xFC griye b\xFCr\xFCnd\xFC, halk acil \xE7\xF6z\xFCm bekliyor."
   ecoChoice:
