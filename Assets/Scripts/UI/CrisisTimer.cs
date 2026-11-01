@@ -4,58 +4,92 @@ using TMPro;
 
 public class CrisisTimer : MonoBehaviour
 {
-    [Header("Timer Settings")]
-    [SerializeField] private float totalTime = 10f; // Krizin süresi (saniye)
-    private float currentTime;
-    private bool isRunning = false;
+    [Header("Zaman Ayarları")]
+    [Tooltip("Her kart için süre (saniye)")]
+    [SerializeField] private float cardDuration = 10f;
+    private float currentTimer;
+    private bool isTimerRunning = false;
 
-    [Header("UI References")]
-    [SerializeField] private Image timerBarFill;     // Sürüklenecek dolum çubuğu (Fill Area içindeki Image)
-    [SerializeField] private TextMeshProUGUI timerText; // Kalan süreyi gösteren yazı (isteğe bağlı)
+    [Header("UI Elemanları")]
+    [SerializeField] private Image timerFillImage;
+    [SerializeField] private TextMeshProUGUI timerText;
 
-    void Start()
+    [Header("Kart Referansı")]
+    [SerializeField] private CardView cardView;
+
+    private void Awake()
     {
-        // Kriz kartı açıldığı an süreyi başlatabiliriz veya dışarıdan tetikleyebiliriz
-        StartTimer(totalTime);
+        FindCardView();
     }
 
-    void Update()
+    private void Start()
     {
-        if (!isRunning) return;
+        ResetAndStartTimer();
+    }
 
-        if (currentTime > 0)
-        {
-            currentTime -= Time.deltaTime;
-            
-            // Çubuğu güncelle (0 ile 1 arasında oranlar)
-            if (timerBarFill != null)
-            {
-                timerBarFill.fillAmount = currentTime / totalTime;
-            }
+    private void Update()
+    {
+        if (!isTimerRunning) return;
 
-            // Metni güncelle
-            if (timerText != null)
-            {
-                timerText.text = Mathf.Ceil(currentTime).ToString();
-            }
-        }
-        else
+        currentTimer -= Time.deltaTime;
+        UpdateUI();
+
+        if (currentTimer <= 0f)
         {
-            TimeIsUp();
+            currentTimer = 0f;
+            isTimerRunning = false;
+            OnTimeExpired();
         }
     }
 
-    public void StartTimer(float duration)
+    public void ResetAndStartTimer()
     {
-        totalTime = duration;
-        currentTime = duration;
-        isRunning = true;
+        FindCardView();
+        currentTimer = cardDuration;
+        isTimerRunning = true;
+        UpdateUI();
     }
 
-    void TimeIsUp()
+    public void StopTimer()
     {
-        isRunning = false;
-        Debug.Log("Süre bitti! Kriz cezası uygulanabilir.");
-        // Buraya süre bittiğinde otomatik olarak ne olacağını ekleyebilirsin (örn. kartın kapanması)
+        isTimerRunning = false;
+    }
+
+    private void UpdateUI()
+    {
+        if (timerFillImage != null)
+        {
+            timerFillImage.fillAmount = Mathf.Clamp01(currentTimer / cardDuration);
+        }
+
+        if (timerText != null)
+        {
+            timerText.text = Mathf.CeilToInt(currentTimer).ToString();
+        }
+    }
+
+    private void OnTimeExpired()
+    {
+        // YENİ LOG MESAJI BURADA
+        Debug.Log("<color=red>Süre doldu!</color> Kart zorla sola kaydırılıyor...");
+
+        FindCardView();
+
+        if (cardView != null)
+        {
+            cardView.ForceSwipeLeft();
+        }
+    }
+
+    private void FindCardView()
+    {
+        if (cardView == null)
+        {
+            cardView = GetComponent<CardView>();
+            if (cardView == null)
+            {
+                cardView = FindAnyObjectByType<CardView>();
+            }
+        }
     }
 }

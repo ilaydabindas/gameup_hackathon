@@ -11,7 +11,7 @@ public class CardView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     [SerializeField] private TextMeshProUGUI titleText;  
     [SerializeField] private TextMeshProUGUI descText;   
 
-    [Header("Butonlar (Görsel Efekt İçin)")]
+    [Header("Butonlar (Görsel Efekt ve Tıklama İçin)")]
     [SerializeField] private Transform btnLeft;
     [SerializeField] private Transform btnMid;
     [SerializeField] private Transform btnRight;
@@ -39,44 +39,55 @@ public class CardView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private Canvas parentCanvas;
     private Vector2 initialPosition;
     private Coroutine resetCoroutine;
+    private Coroutine animCoroutine;
     private Vector3 originalBtnScale = Vector3.one;
     private Vector3 highlightBtnScale = new Vector3(1.1f, 1.1f, 1.1f);
     
-    // O anki kartın verilerini hafızada tutarız (Önizleme rakamları için gerekli)
     private CrisisCardData currentCardData;
 
     private void Awake()
     {
-        rectTransform = GetComponent<RectTransform>();
-        parentCanvas = GetComponentInParent<Canvas>();
-        initialPosition = rectTransform.anchoredPosition;
-        
-        if (btnLeft != null) originalBtnScale = btnLeft.localScale;
+        InitializeReferences();
+    }
+
+    private void InitializeReferences()
+    {
+        if (rectTransform == null)
+        {
+            rectTransform = GetComponent<RectTransform>();
+            parentCanvas = GetComponentInParent<Canvas>();
+            initialPosition = rectTransform.anchoredPosition;
+        }
+        if (btnLeft != null && originalBtnScale == Vector3.one) 
+        {
+            originalBtnScale = btnLeft.localScale;
+        }
     }
 
     public void SetupCard(CrisisCardData cardData)
     {
-        currentCardData = cardData; // Veriyi hafızaya al
+        InitializeReferences(); // Güvenlik kontrolü
+        currentCardData = cardData;
 
         if (sectorText != null) sectorText.text = cardData.sectorTag;
         if (titleText != null) titleText.text = cardData.title;
         if (descText != null) descText.text = cardData.description;
 
-        // Üst Başlıkları Doldur
         if (btnRightText != null) btnRightText.text = cardData.ecoChoice.choiceLabel;
         if (btnMidText != null) btnMidText.text = cardData.techChoice.choiceLabel;
         if (btnLeftText != null) btnLeftText.text = cardData.indChoice.choiceLabel;
 
-        // Alt Etki Değerlerini Doldur
         if (btnRightImpactText != null) btnRightImpactText.text = FormatImpact(cardData.ecoChoice);
         if (btnMidImpactText != null) btnMidImpactText.text = FormatImpact(cardData.techChoice);
         if (btnLeftImpactText != null) btnLeftImpactText.text = FormatImpact(cardData.indChoice);
 
         ResetCardPosition();
         gameObject.SetActive(true);
+
+        // Yeni kart gelince süreyi sıfırla
+        FindAnyObjectByType<CrisisTimer>()?.ResetAndStartTimer();
     }
 
-    // Rakamları artı/eksi işaretiyle formatlayan yardımcı fonksiyon
     private string FormatImpact(CardChoice choice)
     {
         string c = choice.carbonImpact > 0 ? $"+{choice.carbonImpact}" : choice.carbonImpact.ToString();
@@ -86,9 +97,69 @@ public class CardView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         return $"C:{c} B:{b} S:{s}";
     }
 
+    public void OnClickLeftChoice() { ForceSwipeLeft(); }
+    public void OnClickMidChoice() { ForceSwipeUp(); }
+    public void OnClickRightChoice() { ForceSwipeRight(); }
+
+    // --- ANİMASYONLU FIRLATMA FONKSİYONLARI ---
+
+    public void ForceSwipeLeft()
+    {
+        InitializeReferences();
+        if (!gameObject.activeInHierarchy) { OnSwipeLeft?.Invoke(); return; }
+
+        if (resetCoroutine != null) StopCoroutine(resetCoroutine);
+        if (animCoroutine != null) StopCoroutine(animCoroutine);
+        animCoroutine = StartCoroutine(AnimateAndSwipeRoutine(new Vector2(-900f, 0f), OnSwipeLeft));
+    }
+
+    public void ForceSwipeRight()
+    {
+        InitializeReferences();
+        if (!gameObject.activeInHierarchy) { OnSwipeRight?.Invoke(); return; }
+
+        if (resetCoroutine != null) StopCoroutine(resetCoroutine);
+        if (animCoroutine != null) StopCoroutine(animCoroutine);
+        animCoroutine = StartCoroutine(AnimateAndSwipeRoutine(new Vector2(900f, 0f), OnSwipeRight));
+    }
+
+    public void ForceSwipeUp()
+    {
+        InitializeReferences();
+        if (!gameObject.activeInHierarchy) { OnSwipeUp?.Invoke(); return; }
+
+        if (resetCoroutine != null) StopCoroutine(resetCoroutine);
+        if (animCoroutine != null) StopCoroutine(animCoroutine);
+        animCoroutine = StartCoroutine(AnimateAndSwipeRoutine(new Vector2(0f, 900f), OnSwipeUp));
+    }
+
+    private IEnumerator AnimateAndSwipeRoutine(Vector2 targetOffset, Action callback)
+    {
+        float duration = 0.2f;
+        float elapsed = 0f;
+        Vector2 startPos = rectTransform.anchoredPosition;
+        Vector2 targetPos = startPos + targetOffset;
+
+        while (elapsed < duration)
+        {
+            // Zaman durdurulsa bile animasyonun takılmaması için unscaledDeltaTime kullanıyoruz
+            elapsed += Time.unscaledDeltaTime;
+            float t = elapsed / duration;
+            rectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);
+            rectTransform.localEulerAngles = new Vector3(0, 0, -rectTransform.anchoredPosition.x * rotationFactor);
+            yield return null;
+        }
+
+        callback?.Invoke();
+        HideCard();
+    }
+
+    // --- DRAG / KAYDIRMA MEKANİĞİ ---
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (resetCoroutine != null) StopCoroutine(resetCoroutine);
+        if (animCoroutine != null) StopCoroutine(animCoroutine);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -134,28 +205,24 @@ public class CardView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         if (currentCardData == null) return;
 
-        // YUKARI - TECH
         if (pos.y > thresholdY && pos.y > Mathf.Abs(pos.x)) 
         { 
             if (btnMid != null) btnMid.localScale = highlightBtnScale;
             if (HUDManager.Instance != null)
                 HUDManager.Instance.ShowPreview(currentCardData.techChoice.carbonImpact, currentCardData.techChoice.budgetImpact, currentCardData.techChoice.supportImpact);
         }
-        // SAĞA - ECO
         else if (pos.x > thresholdX) 
         { 
             if (btnRight != null) btnRight.localScale = highlightBtnScale;
             if (HUDManager.Instance != null)
                 HUDManager.Instance.ShowPreview(currentCardData.ecoChoice.carbonImpact, currentCardData.ecoChoice.budgetImpact, currentCardData.ecoChoice.supportImpact);
         }
-        // SOLA - IND
         else if (pos.x < -thresholdX) 
         { 
             if (btnLeft != null) btnLeft.localScale = highlightBtnScale;
             if (HUDManager.Instance != null)
                 HUDManager.Instance.ShowPreview(currentCardData.indChoice.carbonImpact, currentCardData.indChoice.budgetImpact, currentCardData.indChoice.supportImpact);
         }
-        // KART ORTADAYSA (Karar eşiğine ulaşmadıysa)
         else
         {
             if (HUDManager.Instance != null)
@@ -194,7 +261,6 @@ public class CardView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         rectTransform.localRotation = Quaternion.identity;
         ResetButtonScales();
         
-        // Kart yerine oturduğunda önizleme yazılarını temizle
         if (HUDManager.Instance != null)
             HUDManager.Instance.ClearPreview();
     }
