@@ -9,6 +9,10 @@ public class MainMenuManager : MonoBehaviour
 
     [Header("Yüklenecek Sahne")]
     [SerializeField] private string gameplaySceneName = "GameScene"; // Kart sahnenin adı
+    public void LoadSceneByName(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 
     public void OnPlayClicked()
     {
