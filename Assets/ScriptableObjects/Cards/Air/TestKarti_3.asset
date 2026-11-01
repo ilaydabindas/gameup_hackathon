@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_3
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "HAVACILIK A\u011EI"
+  sectorTag: "Havac\u0131l\u0131k A\u011F\u0131"
   title: "\xD6zel Jet Emisyonu!"
   description: "Zenginlerin \xF6zel jetleri ve s\u0131k i\xE7 hat u\xE7u\u015Flar\u0131 atmosferi h\u0131zla kirletiyor. \u015Eirketler u\xE7u\u015F haklar\u0131n\u0131n k\u0131s\u0131tlanmas\u0131n\u0131 istemiyor."
   ecoChoice:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "Jeotermal Sahas\u0131 Sal\u0131n\u0131m\u0131"
+  sectorTag: "Koku Sal\u0131n\u0131m\u0131"
   title: "Jeotermal Koku Sal\u0131n\u0131m\u0131"
   description: "Enerji \xFCretimi yapan jeotermal tesislerden \xE7evreye yo\u011Fun hidrojen s\xFClf\xFCr gaz\u0131 yay\u0131lmaya ba\u015Flad\u0131."
   ecoChoice:

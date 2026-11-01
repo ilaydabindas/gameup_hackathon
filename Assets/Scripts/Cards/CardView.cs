@@ -89,13 +89,20 @@ public class CardView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     }
 
     private string FormatImpact(CardChoice choice)
-    {
-        string c = choice.carbonImpact > 0 ? $"+{choice.carbonImpact}" : choice.carbonImpact.ToString();
-        string b = choice.budgetImpact > 0 ? $"+{choice.budgetImpact}" : choice.budgetImpact.ToString();
-        string s = choice.supportImpact > 0 ? $"+{choice.supportImpact}" : choice.supportImpact.ToString();
-        
-        return $"C:{c} B:{b} S:{s}";
-    }
+{
+    // Üstteki HUD barlarının renklerine uyumlu hex kodları
+    string carbonColor = "#F59E0B";  // Karbon için turuncu/sarı
+    string budgetColor = "#3B82F6";  // Bütçe için mavi
+    string supportColor = "#10B981"; // Destek için yeşil
+
+    // Artı işareti ve değerleri renklendirme etiketleriyle birlikte oluştur
+    string c = choice.carbonImpact > 0 ? $"+{choice.carbonImpact}" : choice.carbonImpact.ToString();
+    string b = choice.budgetImpact > 0 ? $"+{choice.budgetImpact}" : choice.budgetImpact.ToString();
+    string s = choice.supportImpact > 0 ? $"+{choice.supportImpact}" : choice.supportImpact.ToString();
+
+    // Harfler kaldırıldı, sadece renkli sayılar bırakıldı
+    return $"<color={carbonColor}>{c}</color>   <color={budgetColor}>{b}</color>   <color={supportColor}>{s}</color>";
+}
 
     public void OnClickLeftChoice() { ForceSwipeLeft(); }
     public void OnClickMidChoice() { ForceSwipeUp(); }

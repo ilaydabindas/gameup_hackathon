@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti 1
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "Havadan M\xFCdahale K\u0131s\u0131t\u0131"
+  sectorTag: "Havadan M\xFCdahale"
   title: "Yang\u0131n U\xE7a\u011F\u0131 Yetersizli\u011Fi"
   description: "Ba\u015Flayan k\xFC\xE7\xFCk \xE7apl\u0131 yang\u0131nlar, eski filolar nedeniyle havadan zaman\u0131nda m\xFCdahale edilemedi\u011Fi i\xE7in b\xFCy\xFCyor."
   ecoChoice:

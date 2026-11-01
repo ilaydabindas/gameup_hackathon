@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti 3
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "Eski Tip Belediye Otob\xFCsleri"
+  sectorTag: "Belediye Otob\xFCsleri"
   title: "Kara Dumanl\u0131 Otob\xFCsler"
   description: "Belediye filosundaki ekonomik \xF6mr\xFCn\xFC doldurmu\u015F eski otob\xFCsler sokaklarda kara dumanlar b\u0131rak\u0131yor."
   ecoChoice:

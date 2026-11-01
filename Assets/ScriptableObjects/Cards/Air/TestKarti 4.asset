@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti 4
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "Kentsel D\xF6n\xFC\u015F\xFCm Tozlar\u0131"
+  sectorTag: "Kentsel D\xF6n\xFC\u015F\xFCm"
   title: "\u015Eantiye Moloz Tozlar\u0131"
   description: "\u015Eehir genelindeki y\xFCzlerce \u015Fantiyeden y\xFCkselen moloz tozlar\u0131 havay\u0131 ve g\xF6r\xFC\u015F mesafesini kapatt\u0131."
   ecoChoice:

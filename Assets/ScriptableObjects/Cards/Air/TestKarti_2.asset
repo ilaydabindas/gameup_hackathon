@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_2
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "ENERJ\u0130 \u015EEBEKES\u0130"
+  sectorTag: "Enerji \u015Eebekesi"
   title: "A\u015F\u0131r\u0131 Y\xFCk Alarm\u0131!"
   description: "S\u0131cak hava dalgas\u0131 klimalara a\u015F\u0131r\u0131 y\xFCklendi. Elektrik \u015Febekesi \xE7\xF6kmek \xFCzere. Enerji a\xE7\u0131\u011F\u0131n\u0131 acilen nas\u0131l kapataca\u011F\u0131z?"
   ecoChoice:

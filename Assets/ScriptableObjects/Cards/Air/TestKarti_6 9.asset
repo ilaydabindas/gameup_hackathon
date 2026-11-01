@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 9
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "Do\u011Falgaz Bas\u0131n\xE7 Ka\xE7a\u011F\u0131"
+  sectorTag: "Bas\u0131n\xE7 Ka\xE7a\u011F\u0131"
   title: "Do\u011Falgaz Hatt\u0131 Ka\xE7a\u011F\u0131"
   description: "\u015Eebeke ana vanas\u0131ndaki ar\u0131za nedeniyle havaya y\xFCksek oranda saf metan gaz\u0131 kar\u0131\u015Ft\u0131."
   ecoChoice:

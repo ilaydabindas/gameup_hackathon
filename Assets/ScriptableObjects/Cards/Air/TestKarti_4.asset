@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_4
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "\u015Eehir \u0130\xE7i Egzoz ve Sis"
+  sectorTag: Egzoz ve Sis
   title: Metropol Egzoz Sisi
   description: "R\xFCzgars\u0131z hava ko\u015Fullar\u0131 ve milyonlarca eski tip dizel ara\xE7, \u015Fehirde nefes almay\u0131 imkans\u0131z hale getiren bir smog tabakas\u0131 yaratt\u0131."
   ecoChoice:

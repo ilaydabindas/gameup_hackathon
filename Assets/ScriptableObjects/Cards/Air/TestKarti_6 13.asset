@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d7ed756111649ad8cd7a548af22712, type: 3}
   m_Name: TestKarti_6 13
   m_EditorClassIdentifier: Assembly-CSharp::CrisisCardData
-  sectorTag: "Festival Hava Kirlili\u011Fi"
+  sectorTag: "Hava Kirlili\u011Fi"
   title: "Kutlama Havai Fi\u015Fekleri"
   description: "\u015Eehir festivalinde at\u0131lan binlerce havai fi\u015Fek, gece g\xF6ky\xFCz\xFCn\xFC zehirli partik\xFCllerle doldurdu."
   ecoChoice:
